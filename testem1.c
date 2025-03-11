@@ -11,8 +11,11 @@ int registro()
 	char nome[80];
 	char sobrenome[80];
 	char cargo[80];
+	int opcao; //função de voltar ao menu
 	//fim da criação de variaveis/stings
-	
+	do
+{
+	 
 	printf("Digite o CPF a ser cadastrado: "); //coletando informações do usuário
 	scanf("%s", cpf); //%s refere-se a string
 	
@@ -56,6 +59,16 @@ int registro()
 	fprintf(file, cargo); //salvar variavel
 	fclose(file); //fechar arquivo
 	
+	printf("\nDeseja registar outro usuario?\n");
+	printf("1 - Sim \n");
+	printf("2- Voltar ao menu\n");
+	printf("Opção: ");
+	scanf("%d", &opcao);
+	system("cls");
+	
+} while (opcao == 1);
+  	
+	printf("Retornando ao menu principal...\n");
 	system("pause");
 	
 	
